@@ -22,4 +22,7 @@ def webhook():
     if request.method == "POST":
         data = request.get_json()
         print(data)
-        return "EVENT_
+        return "EVENT_RECEIVED", 200
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
