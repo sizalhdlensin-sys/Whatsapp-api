@@ -17,6 +17,7 @@ def webhook():
 
         if mode == "subscribe" and token == VERIFY_TOKEN:
             return challenge, 200
+
         return "Verification failed", 403
 
     if request.method == "POST":
